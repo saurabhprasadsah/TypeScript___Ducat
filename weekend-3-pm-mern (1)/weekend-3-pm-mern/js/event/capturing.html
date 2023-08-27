@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parentDiv {
+            height: 200px;
+            width: 200px;
+            background-color: black;
+            position: relative;
+        }
+
+        #childDiv {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parentDiv">
+        <div id="childDiv">
+            <button id="button">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        let button  = document.getElementById('button')
+        let childDiv  = document.getElementById('childDiv')
+        let parentDiv  = window.document.getElementById('parentDiv')
+
+        button.addEventListener('click', function(event){
+            console.log("button Clicked");
+        }, true)
+
+        childDiv.addEventListener('click', function(){
+            console.log("childDiv Clicked");
+        }, true)
+
+        parentDiv.addEventListener('click', function(){
+            console.log("parentDiv Clicked");
+        }, true)
+    </script>
+</body>
+
+</html>

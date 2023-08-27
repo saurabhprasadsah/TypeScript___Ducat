@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            section {
+                display: flex;
+                /* flex-direction: row-reverse; */
+                flex-wrap: wrap;
+                /* flex-flow: row wrap;  */
+                /* justify-content:space-evenly; */
+                /* height: 500px; */
+                /* align-items:center; */
+                background-color: aqua;
+                /* align-content:space-evenly; */
+            }
+            div {
+                background-color: red;
+                color: white;
+                height: 100px;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 100px;
+            }
+
+            @media screen and (max-width: 768px) {
+                div{
+                    flex: 100%;
+                    /* width: 100%; */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div>
+                div 1
+            </div>
+            <!-- <div style="order: -1">
+                div 2
+            </div> -->
+            <!-- <div style="order:2">
+                div 3
+            </div> -->
+            <!-- <div style="flex-shrink: 2;">
+                div 4
+            </div> -->
+            
+            <!-- <div style="order: 2">
+                div 5
+            </div> -->
+            <!-- <div style="flex-grow: 1">
+                div 6
+            </div>
+            <div style="flex-grow: 2;">
+                div 7
+            </div> -->
+            <div style="align-self: center;">
+                div 8
+            </div>
+            <!-- <div style="flex-basis: 200px;">
+                div 9
+            </div> -->
+            <!-- <div style="flex: 1 0 200px">
+                div 10
+            </div> -->
+            <div style="align-self: start;">
+                div 9
+            </div>
+            <div style="align-self: end;">
+                div 10
+        </div>
+        <!-- <div>
+            div 9
+        </div>
+        <div>
+            div 10
+    </div> -->
+            <!-- <div>
+                div 1
+            </div>
+            <div>
+                div 2
+            </div>
+            <div>
+                div 3
+            </div>
+            <div>
+                div 4
+            </div>
+            
+            <div>
+                div 5
+            </div>
+            <div>
+                div 6
+            </div>
+            <div>
+                div 7
+            </div>
+            <div>
+                div 8
+            </div>
+            <div>
+                div 9
+            </div>
+            <div>
+                div 10
+            </div> -->
+        </section>
+        
+    </body>
+</html>

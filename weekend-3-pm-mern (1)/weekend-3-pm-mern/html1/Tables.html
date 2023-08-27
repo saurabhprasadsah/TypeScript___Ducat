@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table {
+                border: 2px solid red;
+                border-collapse: collapse;
+                margin: 10px auto;
+            }
+
+            th,
+            td {
+                border: 2px solid red;
+
+            }
+        </style>
+    </head>
+    <body>
+        <!--     
+                ### HTML Tables
+                - <table>	Defines a table
+                - <th>	Defines a header cell in a table
+                - <tr>	Defines a row in a table
+                - <td>	Defines a cell in a table
+                - <caption>	Defines a table caption
+                - <colgroup>	Specifies a group of one or more columns in a table for formatting
+                - <col>	Specifies column properties for each column within a - <colgroup> element
+                - <thead>	Groups the header content in a table
+                - <tbody>	Groups the body content in a table
+                - <tfoot>	Groups the footer content in a table
+                - <rowspan>  a cell span over multiple rows,
+                - <colspan> a cell span over multiple columns -->
+        <table>
+            <thead>
+                <colgroup>
+                    <col span="1" style="background-color: red;">
+                </colgroup>
+                <caption>TABLE</caption>
+                <tr>
+                    <th>Name</th>
+                    <th>Dummy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Dummy</td>
+                </tr>
+                <tr>
+                    <td>Dummy</td>
+                    <td>Dummy@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">Dummy</td>
+                    <td>Dummy@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Dummy@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Dummy</td>
+                    <td>Dummy@gmail.com</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Dummy</th>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

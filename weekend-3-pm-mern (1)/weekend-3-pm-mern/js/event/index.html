@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Events</h1>
+
+    <!-- <button onclick="console.log('button clicked')">
+            Click Me
+        </button> -->
+
+    <!-- <button onclick="buttonClicked(event)">Click Me</button> -->
+
+    <!-- <script>
+            function buttonClicked(event) {
+                console.log('button clicked')
+                console.log(event);
+            }
+        </script> -->
+
+    <!-- <button id="button">Click Me</button> -->
+
+    <div id="root">
+
+    </div>
+
+    <script>
+        // let button = document.getElementById('button');
+
+        // 2
+        // button.onclick = function (e) {
+        //     console.log("button clicked");
+        //     console.log(e);
+        // }
+
+        // // 3
+        // button.addEventListener('click', function(event) {
+        //     console.log("button clicked");
+        //     console.log(event);
+        // })
+
+        // this
+        // button.onclick = function (e) {
+        //     console.log(this);
+        // }
+
+        // button.onclick =  (e) => {
+        //     console.log(this);
+        // }
+
+        // button.addEventListener('click', function(event) {
+        //    console.log(this);
+        // })
+
+        // button.addEventListener('click', (event) => {
+        //    console.log(this);
+        // })
+
+
+        class Test {
+            a = 10;
+            b = 20;
+
+            // printAll =  () => {
+            //     console.log(this.a);
+            //     console.log(this.b);
+            // }
+
+            printAll () {
+                console.log(this.a);
+                console.log(this.b);
+            }
+
+            render() {
+                let button = document.createElement('button')
+                button.innerHTML = "click me"
+                // button.addEventListener('click', () => {
+                //     console.log(this);
+                //     this.printAll()
+                // })
+
+                button.addEventListener('click', this.printAll.bind(this))
+
+
+                let root = document.getElementById('root')
+                root.append(button)
+            }
+        }
+
+        let t = new Test()
+
+        t.render()
+
+    </script>
+
+</body>
+
+</html>
